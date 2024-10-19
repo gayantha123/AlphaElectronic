@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #0056b3;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #007BFF;
+    margin-top: 20px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info, .about, .media, .message-form, .creator-info {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.images img {
+    width: calc(33% - 10px);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.videos iframe {
+    width: calc(45% - 10px);
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-form input,
+.message-form textarea {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.message-form button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.message-form button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #343a40;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.creator-info {
+    text-align: center;
+}
+
+.creator-info img {
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .images img,
+    .videos iframe {
+        width: calc(50% - 10px);
+    }
+
+    .message-form input,
+    .message-form textarea {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .images img,
+    .videos iframe {
+        width: 100%;
+    }
+}
